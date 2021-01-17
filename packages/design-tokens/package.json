@@ -1,0 +1,16 @@
+{
+  "name": "@dl/design-tokens",
+  "version": "0.1.0",
+  "main": "dist/js/variables.js",
+  "author": "Aditya Agarwal",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "sd": "style-dictionary"
+  },
+  "devDependencies": {
+    "style-dictionary": "^2.10.2"
+  }
+}
