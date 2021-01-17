@@ -5,7 +5,9 @@ module.exports = {
     check: true,
   },
   webpackFinal: async (config, { configType }) => {
-    config.module.rules = config.module.rules.filter(x => x.test.test && !x.test.test('file.css'));
+    config.module.rules = config.module.rules.filter(
+      x => x.test.test && !x.test.test('file.css')
+    );
     config.module.rules.push({
       test: /\.css$/,
       use: [
@@ -14,6 +16,15 @@ module.exports = {
           loader: 'css-loader',
           options: {
             modules: { auto: true },
+          },
+        },
+        {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: true,
+            postcssOptions: {
+              plugins: ['postcss-nested', 'autoprefixer'],
+            },
           },
         },
       ],

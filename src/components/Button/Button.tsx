@@ -7,6 +7,8 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
   children?: ReactChild;
 }
 
+console.log('styles', styles);
+
 export const Button: FC<Props> = (props) => {
   const { onClick, children } = props;
   return (
