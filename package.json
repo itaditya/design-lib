@@ -19,8 +19,8 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "sb:start": "start-storybook -p 6006",
+    "sb:build": "build-storybook"
   },
   "peerDependencies": {
     "react": ">=16"
